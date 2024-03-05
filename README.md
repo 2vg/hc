@@ -2,7 +2,7 @@
 
 **H**oliday **C**hecker
 
-A tiny rust script that handles whether today is a holiday or not.
+A tiny rust script that handles whether today is a holiday or not, but for *JP*.
 
 ## description
 
@@ -28,6 +28,14 @@ rustup install nightly
 Then, copy this script to anywhere in ur PATH.
 
 ## usage
+
+available options:
+
+* `-i, --includes-weekend`: Includes Saturday and Sunday as holiday.
+* `-o, --only_weekend`: Handle as holiday only Saturday and Sunday. This option will be ignored `--includes_weekend`.
+* `-u, --utc`: Use UTC offset to check current date instead of the Local offset.
+
+here's some usecase exmaples:
 
 * run something if only jp-holiday
 

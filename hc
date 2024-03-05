@@ -49,10 +49,10 @@ fn main() -> Result<()> {
     let is_weekend = now.weekday() == Weekday::Saturday || now.weekday() == Weekday::Sunday;
 
     let should_exit = if args.includes_weekend {
-        (holiday && is_weekend) || (args.only_weekend && is_weekend)
+        (holiday && is_weekend)
     } else {
         holiday
-    };
+    } || (args.only_weekend && is_weekend);
 
     if should_exit {
         exit(0);
